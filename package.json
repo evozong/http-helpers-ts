@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evozong/http-helpers-ts"
+    "url": "git+https://github.com/evozong/http-helpers-ts.git"
   },
   "description": "HTTP Helpers TypeScript library",
   "main": "dist/index.js",

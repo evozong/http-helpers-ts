@@ -1,6 +1,7 @@
 name: Build and Publish package to npmjs
 
 on:
+  workflow_dispatch: # This enables the manual trigger
   push:
     tags:
       - 'v*'

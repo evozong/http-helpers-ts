@@ -58,8 +58,13 @@ var HttpResponseCode_Ok = 200;
 ```
 
 ## Publishing this package
+Publishing is done through Github Actions. A build and publish workflow has been set up to trigger when a commit has a "v*" tag. To publish a new version:
+
+1. Make sure you update package.json to the right version number!
+2. Create a tag over the commit to be pushed.
+3. Push to main.
 
 ```sh
 npm login
-npm publish --access public
+npm publish
 ```

@@ -2,6 +2,8 @@
  * HTTP request methods.
  *
  * @see {@link https://www.iana.org/assignments/http-methods/http-methods.xhtml IANA HTTP Method Registry}
+ * Last Updated Date in IANA Registry: 2025-11-21
+ * If registry has been updated since the date above, this file may be out of date.
  */
 
 /** Requests a representation of the specified resource. Should only retrieve data.

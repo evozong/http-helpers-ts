@@ -1,10 +1,14 @@
 # http-helpers-ts
 
-The HTTP Helpers TypeScript library has been written to support tree-shaking, which means that unused exports will not be included in your final build, making your ts bundle smaller and more efficient.
+The HTTP Helpers TypeScript library provides constants for the HTTP protocol documented in the IANA Registry. The library **supports tree-shaking**, which means that unused exports will not be included in your final build, making your ts bundle smaller and more efficient.
 
 The helpers library currently supports the following HTTP constants:
-1. HTTP Methods (GET, POST, ...)
-2. HTTP Response Codes (OK, NoContent, ...)
+
+| Type | Prefix | Example |
+|---|---|---|
+| HTTP Methods | `HttpMethod_` | GET, POST, ... |
+| HTTP Response Codes | `HttpResponseCode_` | Ok, NoContent, ... |
+| HTTP Header Field Names | `HttpHeader_` | Accept, Authorization, Content-Type, ... |
 
 All constants are retrieved from IANA registry, ensuring only the officially supported values are supported. Each constant also provides documentation summarized from their RFC.
 
@@ -56,6 +60,11 @@ var HttpMethod_GET = "GET";
 var HttpResponseCode_Ok = 200;
 // Nothing else is included!
 ```
+
+## Contributions
+If you find that some of the supported constants are out of date, update the file and create a Pull Request, I will merge and publish a new version.
+
+Feel free to also create support for more HTTP constants! There are too many in the IANA registry, I did not import them all.
 
 ## Publishing this package
 Publishing is done through Github Actions. A build and publish workflow has been set up to trigger when a commit has a "v*" tag. To publish a new version:

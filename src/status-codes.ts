@@ -2,6 +2,8 @@
  * HTTP Response status codes.
  *
  * @see {@link https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml IANA Registry}
+ * Last Updated Date in IANA Registry: 2025-09-15
+ * If registry has been updated since the date above, this file may be out of date.
  */
 
 /** The server has received the request headers and the client should proceed to send the request body. Used to check if the server is willing to accept the request before the body is transmitted.

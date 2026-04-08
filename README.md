@@ -1,14 +1,14 @@
 # http-helpers-ts
 
-The HTTP Helpers TypeScript library has been written to support tree-shaking, which means that unused exports will not be included in your final build, making it more efficient!
+The HTTP Helpers TypeScript library has been written to support tree-shaking, which means that unused exports will not be included in your final build, making your ts bundle smaller and more efficient.
 
 The helpers library currently supports the following HTTP constants:
 1. HTTP Methods (GET, POST, ...)
 2. HTTP Response Codes (OK, NoContent, ...)
 
-Each constant also contains documentation help summarized from their IANA specification.
+All constants are retrieved from IANA registry, ensuring only the officially supported values are supported. Each constant also provides documentation summarized from their RFC.
 
-Since only the variable names are exported, names are still prepended with the type of constant to prevent collisions.
+Since only the variable names are exported, names are prepended with the type of constant to prevent collisions.
 
 ## Installation
 Since the library only contains exported values, you can include it as a dev dependency instead of a runtime dependency.

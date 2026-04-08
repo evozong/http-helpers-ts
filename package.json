@@ -14,8 +14,10 @@
   },
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "publish": "npm publish --access public"
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "files": [
     "dist"

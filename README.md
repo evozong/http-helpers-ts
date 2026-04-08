@@ -5,13 +5,13 @@ HTTP Helpers TypeScript library.
 ## Installation
 
 ```sh
-npm install http-helpers-ts
+npm install @evozong/http-helpers-ts
 ```
 
 ## Usage
 
 ```ts
-import { hello } from "http-helpers-ts";
+import { hello } from "@evozong/http-helpers-ts";
 
 console.log(hello); // "Hello World!"
 ```
@@ -34,5 +34,5 @@ npm run build
 
 ```sh
 npm login
-npm publish
+npm publish --access public
 ```

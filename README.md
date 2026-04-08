@@ -5,7 +5,7 @@ HTTP Helpers TypeScript library.
 ## Installation
 
 ```sh
-npm install @evozong/http-helpers-ts
+npm install -D @evozong/http-helpers-ts
 ```
 
 ## Usage

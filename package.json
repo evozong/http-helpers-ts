@@ -1,6 +1,10 @@
 {
   "name": "@evozong/http-helpers-ts",
   "version": "0.1.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
   "description": "HTTP Helpers TypeScript library",
   "main": "dist/index.js",
   "type": "module",

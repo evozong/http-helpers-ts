@@ -109,6 +109,31 @@ var HttpResponseCode_Ok = 200;
 // Nothing else is included!
 ```
 
+
+## Features
+
+### Support for Tree Shaking to minimize code bloat
+
+Smaller code bundles take **less time to load** and require **less memory to run**. This is helpful in any application, but *especially* important if you create components for use on Lambdas. As Lambdas load and execute on demand, a smaller code bundle minimizes the **cold start time** and uses less memory, resulting in cheaper executions.
+
+There are thousands of HTTP constants, but only a handful of them would be used in your application, making the HTTP constants library a great candidate for tree-shaking. The `http-helpers-ts` library was implemented to export only the used constants in the final code bundle. In my tests, the tree-shaken library reduced my code bundle size by as much as 600KB.
+
+### Support for wide range of HTTP Constants
+
+When working with the HTTP protocol, you will encounter many different types of constant values. Unfortunately, many libraries support only a subset of constants, making you hunt for different libraries to manage all the magic values in your code. Worse, these libraries usually have different coding styles, making them confusing to use together.
+
+To solve this problem, the `http-helpers-ts` library supports a wide range of HTTP constants. It currently supports 4 commonly used types of constants and will add more in the future.
+
+### Full coverage of supported values
+
+The supported range of values for any set of HTTP constants is not a static list: it continues evolving as new specifications (RFCs) are created to support new technologies. Most libraries treat coverage as static, supporting a known set of values and inviting contributions after they're found to be insufficient.
+
+The `http-helpers-ts` library takes a different approach. It refers to the most authoritative source of truth: the **Internet Assigned Numbers Authority ([IANA](https://www.iana.org/))**. IANA is the organization that standardizes all RFCs for the Internet specification. They even manage a [Protocol Registry](https://www.iana.org/protocols) that helpfully tables the full list of values for any protocol, for example the [HTTP Methods](https://www.iana.org/assignments/http-methods/http-methods.xhtml) registry. On top of that, it has a "Last Updated" field on the page that would tell us whether the library that extracted values from this page needed to be updated again. By depending on the IANA Protocol Registry, the library establishes a long-term maintainability process to support all authoritative values in perpetuity.
+
+### Documentation of values that link to the authoritative specification
+
+HTTP constants are not always self-explanatory. The `http-helpers-ts` library uses GenAI to read the IANA Registry and related RFCs to create the best explanation for each of the thousands of constants supported in the library. The documentation also links back to the exact RFC and section that specified the given constant, giving you direct access to the original description that created it.
+
 ## Contributions
 If you find that some of the supported constants are out of date, update the file and create a Pull Request, I will merge and publish a new version.
 

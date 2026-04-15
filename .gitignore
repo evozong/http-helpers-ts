@@ -2,3 +2,5 @@ node_modules/
 dist/
 .npmrc
 .DS_Store
+demo/node_modules/
+demo/bundle.js

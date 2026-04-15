@@ -1,0 +1,16 @@
+{
+  "name": "tree-shaking-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild app.ts --bundle --outfile=bundle.js --platform=browser --tree-shaking=true",
+    "demo": "npm run build --silent && echo '' && echo '=== bundle.js ===' && cat bundle.js"
+  },
+  "dependencies": {
+    "@evozong/http-helpers-ts": "file:.."
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

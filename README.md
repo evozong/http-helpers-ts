@@ -1,8 +1,22 @@
 # http-helpers-ts
 
-The HTTP Helpers TypeScript library provides constants for the HTTP protocol documented in the **IANA Registry**. The library **supports tree-shaking**, which means that unused exports will not be included in your final build, making your ts bundle smaller and more efficient.
+The [`http-helpers-ts`](https://www.npmjs.com/package/@evozong/http-helpers-ts) library provides constants commonly used in HTTP APIs. Three things distinguish it from similar libraries on npm:
 
-The helpers library currently supports the following HTTP constants:
+1. The library supports tree-shaking, ensuring that unused constants are not exported into your final build, bloating your code bundle.
+2. The constants are sourced from the **[IANA Protocol Registry](https://www.iana.org/protocols)**, ensuring that all the *officially supported* values are covered in the library.
+3. Documentation for each value is summarized directly from the RFC, and the documentation includes a link to the RFC and section that specified the value, giving you direct access to the source of truth for each value.
+
+![Hover tooltip showing HttpMethod_GET with its RFC summary and a link to RFC 9110 Section 9.3.1](https://raw.githubusercontent.com/evozong/http-helpers-ts/refs/heads/main/README-img-documentation.png)
+
+## Installation
+You can install the library as a dev dependency, as it can be compiled away entirely:
+
+```sh
+npm install -D @evozong/http-helpers-ts
+```
+
+## Supported Constants
+The current version (v1.0.0) covers four common sets of constants. Pull Request contributions to support more sets of constants are welcome 😃.
 
 | Type | Prefix | Example |
 |---|---|---|
@@ -10,17 +24,6 @@ The helpers library currently supports the following HTTP constants:
 | HTTP Response Codes | `HttpResponseCode_` | Ok, NoContent, ... |
 | HTTP Header Field Names | `HttpHeader_` | Accept, Authorization, Content-Type, ... |
 | HTTP Media Types (MIME Types) | `HttpMediaType_` | application/json, image/png, text/html, ... |
-
-All constants are retrieved from IANA registry, ensuring only the officially supported values are supported. Each constant also provides documentation summarized from their RFC.
-
-Since only the variable names are exported, names are prepended with the type of constant to prevent collisions.
-
-## Installation
-Since the library only contains exported values, you can include it as a dev dependency instead of a runtime dependency.
-
-```sh
-npm install -D @evozong/http-helpers-ts
-```
 
 ## Usage
 

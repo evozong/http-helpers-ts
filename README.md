@@ -122,6 +122,6 @@ Publishing is done through Github Actions. A build and publish workflow has been
 3. Push to main.
 
 ```sh
-npm login
-npm publish
+git tag <VersionNumber> # make sure this matches the version number in package.json
+git push && git push --tag
 ```
